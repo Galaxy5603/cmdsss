@@ -1,5 +1,10 @@
+local A_1 = "BLK_Galaxy CMDS V1.25 BETA "
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+
 AutoNormalChat = true
-prefix = "/" -- if put "" you won't need any prefix
+prefix = "!" -- if put "" you won't need any prefix
 
 repeat
     wait()
@@ -36,7 +41,7 @@ else
     local StarterGui = game:GetService("StarterGui")
     coroutine.wrap(function()
         StarterGui:SetCore("SendNotification", {
-            Title = "BLK_Galaxy CMDS V6",
+            Title = "BLK_Galaxy CMDS V1",
             Text = "Updating 2024",
             Icon = "http://www.roblox.com/asset/?id=17899743384",
             Duration = 10}
@@ -113,7 +118,7 @@ else
                     writefile(filename2, json)
                     wait(.5)
                     local newver = Instance.new("Message", game.CoreGui)
-                    newver.Text = "BLK_Galaxy Creator = blk_cmds use /cmds for get the cmds"
+                    newver.Text = "BLK_Galaxy Creator = blk_cmds use !cmds for get the cmds"
                     wait(5)
                     if newver then
                         newver:Destroy()
